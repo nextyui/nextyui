@@ -1,0 +1,17 @@
+import React, { Fragment } from "react";
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "../hooks/useTheme";
+import "tailwindcss/tailwind.css";
+import "../styles/index.scss";
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <ThemeProvider>
+      <Fragment>
+        <Component {...pageProps} />
+      </Fragment>
+    </ThemeProvider>
+  );
+};
+
+export default MyApp;
